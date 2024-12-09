@@ -2,36 +2,44 @@ import styled from "styled-components";
 
 export const MainStyle = styled.main`
   display: flex;
-  justify-content: center;   
-  align-items: center;       
-  height: 80vh;             
-  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  
+  width: 100vw;   
+  padding: 0;
+  position: relative;
   text-align: center;
+  overflow: hidden;
 `;
 
 export const Section = styled.section`
-  position: relative;
+  position: relative; 
   display: flex;
-  align-items: center;       
   justify-content: center; 
-  width: 100%;          
+  align-items: center;
+  width: 100%;
+  height: 100%;       
+  
 `;
 
-// Estilo para o copo
+
 export const Copo = styled.img`
   position: absolute;
-  width: 450px;  // Ajusta o tamanho do copo
+  width: 35vw;  
+  max-width: 450px; 
   height: auto;
-  z-index: 1;    // Garante que o copo fique em cima do fundo
+  z-index: 2;    
+  transition: transform 0.3s ease;
 `;
 
 export const Ul = styled.ul`
   display: flex;
-  justify-content: center;  
+  justify-content: flex-end;
   gap: 20px;                
   list-style: none;         
-  margin-top: 20px;         
+  margin-top: 40px;         
   padding: 0;
+  cursor: pointer;
 `;
 
 
@@ -44,6 +52,7 @@ border-radius: 20px;
 font-size: 1.2rem;
 cursor: pointer;
 margin: 20px;
+width: 12vw;
 `;
 
 

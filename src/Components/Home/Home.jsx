@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { MainStyle, Copo, Section, Button, Ul, H2, Span, P } from "./style";
 
-// Importe as imagens locais
 import amarelopequeno from "../../assets/imagens/amarelopequeno.png";
 import vermelhopequeno from "../../assets/imagens/vermelhopequeno.png";
 import laranjapequeno from "../../assets/imagens/laranjapequeno.png";
@@ -13,14 +12,14 @@ import Ellipseamarelo from "../../assets/imagens/Ellipseamarelo.png";
 import Ellipsevermelho from "../../assets/imagens/Ellipsevermelho.png";
 
 export default function Home() {
-  // Estado para controlar o café selecionado e o fundo
+  
   const [copoSelecionado, setCompoSelecionado] = useState(Copolaranjagrande);
   const [corDeFundo, setCorDeFundo] = useState(Ellipseverde);
 
-  // Função para trocar a imagem do copo e do fundo
+  
   const trocandoCopo = (imagemCopo, imagemFundo) => {
-    setCompoSelecionado(imagemCopo);  // Atualizando o copo
-    setCorDeFundo(imagemFundo);  // Atualizando o fundo
+    setCompoSelecionado(imagemCopo); 
+    setCorDeFundo(imagemFundo);  
   };
 
   return (
@@ -34,35 +33,34 @@ export default function Home() {
           Latte Macchiato e o Espresso. Além disso, a Starbucks oferece
           bebidas quentes e frias, doces diferenciados e sanduíches.
         </P>
-        <Button>SAIBA MAIS</Button> {/* Botão estilizado */}
+        <Button>SAIBA MAIS</Button> 
         <Ul>
-          {/* Imagens pequenas para controle */}
+          
           <img
             src={amarelopequeno}
             alt="copo pequeno amarelo"
             onClick={() =>
-              trocandoCopo(Copoamarelogrande, Ellipseamarelo)  // Troca a imagem do copo e do fundo
+              trocandoCopo(Copoamarelogrande, Ellipseamarelo)  
             }
           />
           <img
             src={vermelhopequeno}
             alt="copo pequeno vermelho"
             onClick={() =>
-              trocandoCopo(Copovermelhogrande, Ellipsevermelho)  // Troca a imagem do copo e do fundo
+              trocandoCopo(Copovermelhogrande, Ellipsevermelho)  
             }
           />
           <img
             src={laranjapequeno}
             alt="copo pequeno laranja"
             onClick={() =>
-              trocandoCopo(Copolaranjagrande, Ellipseverde)  // Troca a imagem do copo e do fundo
+              trocandoCopo(Copolaranjagrande, Ellipseverde)  
             }
           />
         </Ul>
       </section>
 
       <Section>
-        {/* Exibindo o copo e fundo selecionados */}
         <Copo src={copoSelecionado} alt="Copo Selecionado" />
         <img src={corDeFundo} alt="Fundo" />
       </Section>
