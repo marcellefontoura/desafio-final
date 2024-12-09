@@ -1,5 +1,7 @@
 import {Section, H2, H1, P, Button, Img, Div} from "./style";
 
+import starbucks from "../../assets/imagens/starbucks.png";
+
 export default function Sobre () {
     return (
         <Section>
@@ -10,7 +12,7 @@ export default function Sobre () {
 
             <Button>SAIBA MAIS</Button>
             </Div>
-            <Img src="src/assets/imagens/sobrecafe.png" alt="" />    
+            <Img src={starbucks} alt="Foto Starbucks" />    
         </Section>
     )
 }
